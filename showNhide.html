@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShowNHide</title>
+    <style>
+        #demo{
+            width: 500px;
+            height: 500px;
+            background-color: brown;
+            margin: auto;
+        }
+        .functionBox{
+            margin: auto;
+            display: flex;
+            justify-content: center;
+        }
+        button{
+            padding: 5px 20px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="functionBox">
+        <!-- <button id="hide">Hide</button> -->
+        <input type="button" value="Hide" id="hide">
+    </div>
+    <div id="demo"></div>
+
+    <script>
+        var key = 1;
+        document.getElementById('hide').onclick = function()
+        {
+            if(key == 1)
+            {
+                document.getElementById('demo').style.display = "none";
+                document.getElementById('hide').innerHTML = "Show";
+                document.getElementById('hide').value = "Show";
+                key = 0;
+            }
+            else
+            {
+                document.getElementById('demo').style.display = "block";
+                document.getElementById('hide').innerHTML = "Hide";
+                document.getElementById('hide').value = "Hide";
+                key = 1;
+            }
+        }
+    </script>
+</body>
+</html>

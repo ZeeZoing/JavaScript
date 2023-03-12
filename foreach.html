@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        .navbar{
+            margin: auto;
+        }
+        .navbar ul{
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+        .navbar ul li{
+            padding: 10px 30px;
+            background-color: pink;
+            margin: 3px;
+            color: azure;
+        }
+        .navbar ul li a{
+            font-size: 20px;
+            font-weight: 500;
+            font-family: sans-serif;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar" id="demo">
+        <!-- <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Price</a></li>
+            <li><a href="#">Location</a></li>
+            <li><a href="#">FeedBack</a></li>
+        </ul> -->
+    </div>
+</body>
+<script>
+    var menu = [
+        { 'menu' : "Home", "color" : "blue" },
+        { 'menu' : "Contact", "color" : "green" },
+        { 'menu' : "Price", "color" : "red" },
+        { 'menu' : "Location", "color" : "yellow" },
+        { 'menu' : "Feedback", "color" : "black" },
+    ] 
+    var ul = ' ';
+    for(i in menu){
+        ul += '<li><a href="#" style="color: '+menu[i].color +';">'+ menu[i].menu+'</a></li>'
+    }
+    document.getElementById('demo').innerHTML = '<ul> '+ ul +' </ul>';
+</script>
+</html>
